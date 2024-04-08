@@ -39,6 +39,7 @@ import { SignInPage } from '@backstage/core-components';
 
 
 const app = createApp({
+  apis,
   components: {
     SignInPage: props => (
       <SignInPage
@@ -53,7 +54,6 @@ const app = createApp({
       />
     ),
   },
-  apis,
   bindRoutes({ bind }) {
     bind(catalogPlugin.externalRoutes, {
       createComponent: scaffolderPlugin.routes.root,
